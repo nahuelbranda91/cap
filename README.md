@@ -60,21 +60,21 @@ La aplicación expone un punto de conexión REST que permite consultar precios. 
 GET http://localhost:8080/api/prices?applicationDate=YYYY-MM-DDTHH:mm:ss&productId=ID_DEL_PRODUCTO&brandId=ID_DE_LA_CADENA
 ```
 
-```http
+```
 Example 1: Get the price for product 35455, brand 1 (ZARA) on 2020-06-14T10:00:00.
-GET http://localhost:8090/api/prices?application_date=2020-06-14T10:00:00&product_id=35455&brand_id=1
+GET http://localhost:8080/api/prices?application_date=2020-06-14T10:00:00&product_id=35455&brand_id=1
 
 Example 2: Get the price for product 35455, brand 1 (ZARA) on 2020-06-14T16:00:00.
-GET http://localhost:8090/api/prices?application_date=2020-06-14T16:00:00&product_id=35455&brand_id=1
+GET http://localhost:8080/api/prices?application_date=2020-06-14T16:00:00&product_id=35455&brand_id=1
 
 Example 3: Get the price for product 35455, brand 1 (ZARA) on 2020-06-14T21:00:00.
-GET http://localhost:8090/api/prices?application_date=2020-06-14T21:00:00&product_id=35455&brand_id=1
+GET http://localhost:8080/api/prices?application_date=2020-06-14T21:00:00&product_id=35455&brand_id=1
 
 Example 4: Get the price for product 35455, brand 1 (ZARA) on 2020-06-15T10:00:00.
-GET http://localhost:8090/api/prices?application_date=2020-06-15T10:00:00&product_id=35455&brand_id=1
+GET http://localhost:8080/api/prices?application_date=2020-06-15T10:00:00&product_id=35455&brand_id=1
 
 Example 5: Get the price for product 35455, brand 1 (ZARA) on 2020-06-16T21:00:00.
-GET http://localhost:8090/api/prices?application_date=2020-06-16T21:00:00&product_id=35455&brand_id=1
+GET http://localhost:8080/api/prices?application_date=2020-06-16T21:00:00&product_id=35455&brand_id=1
 ```
 
 - `applicationDate`: la fecha de aplicación en formato ISO 8601 (por ejemplo, `2020-06-14T10:00:00`).
