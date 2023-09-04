@@ -83,4 +83,34 @@ GET http://localhost:8080/api/prices?application_date=2020-06-16T21:00:00&produc
 
 La respuesta será un JSON que contiene información sobre el precio aplicable.
 
+En caso de error la Api expone un json con los campos status_code y detail
+
+Example Errors 
+```
+Example Error 1
+http://localhost:8085/api/prices?application_date=2020-06-14T10:00:00&product_id=35455&brand_id=a
+Header Status Code: 400
+{
+"status": "BAD_REQUEST",
+"details": "brand_id should be of type long"
+}
+
+Example Error 2
+http://localhost:8085/api/prices?application_date=2020-06-14T10:00:00&product_id=35455&brand_id=5
+Header Status Code: 404
+{
+"status": "NOT_FOUND",
+"details": "Price not found"
+}
+
+Example Error 3
+Header Status Code: 400
+http://localhost:8085/api/prices?application_date=2020-6-14T10:00:00&product_id=35455&brand_id=1
+{
+"status": "BAD_REQUEST",
+"details": "application_date should be of type java.time.LocalDateTime"
+}```
+
+
+
 

@@ -7,12 +7,10 @@ import java.time.LocalDateTime;
 
 public record PriceDTO(
         Long productId,
-        Long brandId,
-        Integer priceList,
-        LocalDateTime startDate,
-        LocalDateTime endDate,
+        String brand,
+        LocalDateTime applicationDate,
         Integer priority,
-        BigDecimal price,
+        Double price,
         String currency
 ) {
 }

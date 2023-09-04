@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @Getter
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Price {
-    private Long brandId;
+    private Brand brand;
     private LocalDateTime startDate;
     private LocalDateTime endDate;
     private Long priceList;

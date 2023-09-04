@@ -72,10 +72,8 @@ class PriceControllerTest {
         return result.andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.productId").value(productId))
-                .andExpect(jsonPath("$.brandId").value(brandId))
+                .andExpect(jsonPath("$.brand").value("ZARA"))
                 .andExpect(jsonPath("$.price").isNumber())
-                .andExpect(jsonPath("$.startDate").isNotEmpty())
-                .andExpect(jsonPath("$.endDate").isNotEmpty())
                 .andExpect(jsonPath("$.currency").isString());
     }
 }

@@ -17,7 +17,9 @@ public class PriceEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long brandId;
+    @ManyToOne
+    @JoinColumn(name = "brand_id", referencedColumnName = "id")
+    private BrandEntity brand;
     private LocalDateTime startDate;
     private LocalDateTime endDate;
     private Long priceList;

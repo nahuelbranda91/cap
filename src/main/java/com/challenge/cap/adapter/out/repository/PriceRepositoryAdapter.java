@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 import java.util.Optional;
 
 @Component
-public class PriceRespositoryAdapter implements PriceRepositoryPort {
+public class PriceRepositoryAdapter implements PriceRepositoryPort {
     @Autowired
     PriceJpaRepository priceJpaRepository;
     @Override

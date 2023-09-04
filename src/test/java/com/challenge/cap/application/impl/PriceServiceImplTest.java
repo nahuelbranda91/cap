@@ -1,5 +1,6 @@
 package com.challenge.cap.application.impl;
 
+import com.challenge.cap.adapter.out.entity.BrandEntity;
 import com.challenge.cap.adapter.out.entity.PriceEntity;
 import com.challenge.cap.domain.exception.ResourceNotFoundException;
 import com.challenge.cap.domain.model.Price;
@@ -64,7 +65,7 @@ public class PriceServiceImplTest {
                 .price(35.50)
                 .priceList(1L)
                 .currency("EUR")
-                .brandId(1L)
+                .brand(BrandEntity.builder().id(1L).name("ZARA").build())
                 .endDate(LocalDateTime.parse("2020-12-31T23:59:59"))
                 .priority(1)
                 .productId(35455L)
