@@ -10,8 +10,12 @@ import java.util.Optional;
 
 @Component
 public class PriceRepositoryAdapter implements PriceRepositoryPort {
-    @Autowired
-    PriceJpaRepository priceJpaRepository;
+    private final PriceJpaRepository priceJpaRepository;
+
+    public PriceRepositoryAdapter(PriceJpaRepository priceJpaRepository) {
+        this.priceJpaRepository = priceJpaRepository;
+    }
+
     @Override
     public Optional<PriceEntity> getPrice(LocalDateTime applicationDate, Long productId, Long brandId) {
         return priceJpaRepository

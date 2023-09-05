@@ -30,8 +30,7 @@ public class PriceServiceImplTest {
     @BeforeEach
     public void setUp() {
         MockitoAnnotations.openMocks(this);
-        priceService = new PriceServiceImpl(priceRepository);
-        priceService.setObjectMapper(this.objectMapper());
+        priceService = new PriceServiceImpl(priceRepository, this.objectMapper());
     }
 
     @Test

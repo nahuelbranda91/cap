@@ -16,17 +16,13 @@ public class PriceServiceImpl implements PriceService {
 
     private final PriceRepositoryPort priceRepositoryPort;
 
-    private ObjectMapper objectMapper;
+    private final ObjectMapper objectMapper;
 
-    @Autowired
-    public PriceServiceImpl(PriceRepositoryPort priceRepositoryPort) {
+    public PriceServiceImpl(PriceRepositoryPort priceRepositoryPort, ObjectMapper objectMapper) {
         this.priceRepositoryPort = priceRepositoryPort;
-    }
-
-    @Autowired
-    public void setObjectMapper(@Autowired ObjectMapper objectMapper) {
         this.objectMapper = objectMapper;
     }
+
     public Price getPrice(LocalDateTime applicationDate, Long productId, Long brandId) {
         return priceRepositoryPort.getPrice(applicationDate,productId,brandId)
                 .map(priceEntity -> objectMapper.convertValue(priceEntity, Price.class))
